@@ -307,6 +307,13 @@ export const modules: ModuleConfig[] = [
         icon: Share2,
         path: "/channels/leads",
       },
+      {
+        id: "enablement",
+        title: "销售赋能",
+        description: "销售培训、销售支持、工具资料与一线赋能",
+        icon: Lightbulb,
+        path: "/channels/enablement",
+      },
     ],
   },
   {

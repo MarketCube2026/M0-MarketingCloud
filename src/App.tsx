@@ -4,6 +4,7 @@ import DashboardPage from "./pages/DashboardPage";
 import ModuleOverviewPage from "./pages/ModuleOverviewPage";
 import SubPagePlaceholder from "./pages/SubPagePlaceholder";
 import CampaignManagementPage from "./pages/CampaignManagementPage";
+import SalesEnablementPage from "./pages/SalesEnablementPage";
 
 export default function App() {
   return (
@@ -54,6 +55,7 @@ export default function App() {
           path="channels"
           element={<ModuleOverviewPage moduleId="channels" />}
         />
+        <Route path="channels/enablement" element={<SalesEnablementPage />} />
         <Route
           path="channels/:subId"
           element={<SubPagePlaceholder moduleId="channels" />}
