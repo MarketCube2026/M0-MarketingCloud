@@ -11,9 +11,9 @@ export default function StatCard({ stat }: StatCardProps) {
 
   return (
     <div className="rounded-xl bg-white border border-black/[0.04] p-4 transition-colors duration-200 hover:bg-emerald-50/30">
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-[11px] text-slate-400">{stat.label}</span>
-        <div className={`flex items-center gap-1 text-[11px] font-medium ${isUp ? "text-emerald-600" : "text-rose-400"}`}>
+      <div className="mb-2 flex items-start justify-between gap-2">
+        <span className="min-w-0 text-[11px] leading-5 text-slate-400">{stat.label}</span>
+        <div className={`flex shrink-0 items-center gap-1 text-[11px] font-medium ${isUp ? "text-emerald-600" : "text-rose-400"}`}>
           {isUp ? <ArrowUpRight size={12} strokeWidth={1.5} /> : <ArrowDownRight size={12} strokeWidth={1.5} />}
           {stat.change}
         </div>

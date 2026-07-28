@@ -23,14 +23,14 @@ export default function DashboardPage() {
       </div>
 
       {/* 核心指标 */}
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
         {stats.map((stat, i) => (
           <StatCard key={i} stat={stat} index={i} />
         ))}
       </div>
 
       {/* 闭环地图 — 旗舰展示区 */}
-      <div className="rounded-2xl bg-white border border-black/[0.04] p-10 shadow-sm">
+      <div className="rounded-xl border border-black/[0.04] bg-white p-4 shadow-sm sm:p-6 lg:rounded-2xl lg:p-10">
         <div className="mb-8 animate-fade-up">
           <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-emerald-600/60 mb-2">
             Closed-Loop Map

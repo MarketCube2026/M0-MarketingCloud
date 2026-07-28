@@ -35,12 +35,12 @@ export default function ClosedLoopMap() {
   const angleStep = 360 / count;
 
   return (
-    <div className="flex flex-col items-center gap-10 xl:flex-row xl:justify-center xl:gap-16">
+    <div className="flex min-w-0 flex-col items-center gap-8 xl:flex-row xl:justify-center xl:gap-16">
       {/* SVG 闭环地图 */}
-      <div className="flex-shrink-0 animate-fade-up">
+      <div className="w-full min-w-0 flex-shrink animate-fade-up">
         <svg
           viewBox="0 0 680 660"
-          className="h-auto w-full max-w-[460px]"
+          className="mx-auto h-auto w-full max-w-[460px]"
         >
           <defs>
             {/* 节点渐变 */}
@@ -139,7 +139,7 @@ export default function ClosedLoopMap() {
       </div>
 
       {/* 右侧节点列表 */}
-      <div className="max-w-[280px] space-y-5 animate-fade-up" style={{ animationDelay: "200ms" }}>
+      <div className="w-full max-w-[360px] space-y-5 animate-fade-up xl:max-w-[280px]" style={{ animationDelay: "200ms" }}>
         <div>
           <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400/60 mb-2">闭环说明</div>
           <p className="text-[13px] leading-[1.7] text-slate-500/80">
