@@ -143,8 +143,8 @@ export default function ClosedLoopMap() {
         <div>
           <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400/60 mb-2">闭环说明</div>
           <p className="text-[13px] leading-[1.7] text-slate-500/80">
-            以策略为起点，经资源配置、客户洞察、渠道触达、活动执行、绩效评估，
-            最终复盘回写策略，形成持续迭代的飞轮效应。
+            以市场洞察为起点，经策略制定、资源配置、整合营销、渠道销售与绩效复盘，
+            形成持续迭代的营销经营闭环。
           </p>
         </div>
         <div className="space-y-2">

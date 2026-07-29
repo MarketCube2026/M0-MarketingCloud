@@ -5,6 +5,9 @@ import ModuleOverviewPage from "./pages/ModuleOverviewPage";
 import SubPagePlaceholder from "./pages/SubPagePlaceholder";
 import CampaignManagementPage from "./pages/CampaignManagementPage";
 import SalesEnablementPage from "./pages/SalesEnablementPage";
+import CustomerResourcesPage from "./pages/CustomerResourcesPage";
+import ContentAssetsPage from "./pages/ContentAssetsPage";
+import TargetFollowupPage from "./pages/TargetFollowupPage";
 
 export default function App() {
   return (
@@ -22,6 +25,15 @@ export default function App() {
 
         {/* 策略与目标 */}
         <Route
+          path="insights"
+          element={<ModuleOverviewPage moduleId="insights" />}
+        />
+        <Route
+          path="insights/:subId"
+          element={<SubPagePlaceholder moduleId="insights" />}
+        />
+
+        <Route
           path="strategy"
           element={<ModuleOverviewPage moduleId="strategy" />}
         />
@@ -36,6 +48,10 @@ export default function App() {
           element={<ModuleOverviewPage moduleId="resources" />}
         />
         <Route
+          path="resources/customer-resources"
+          element={<CustomerResourcesPage />}
+        />
+        <Route
           path="resources/:subId"
           element={<SubPagePlaceholder moduleId="resources" />}
         />
@@ -43,11 +59,11 @@ export default function App() {
         {/* 客户资产 */}
         <Route
           path="customers"
-          element={<ModuleOverviewPage moduleId="customers" />}
+          element={<Navigate to="/resources/customer-resources" replace />}
         />
         <Route
           path="customers/:subId"
-          element={<SubPagePlaceholder moduleId="customers" />}
+          element={<Navigate to="/resources/customer-resources" replace />}
         />
 
         {/* 渠道与销售 */}
@@ -61,7 +77,7 @@ export default function App() {
           element={<SubPagePlaceholder moduleId="channels" />}
         />
 
-        {/* 活动、内容与传播 */}
+        {/* 整合营销 */}
         <Route
           path="campaigns"
           element={<ModuleOverviewPage moduleId="campaigns" />}
@@ -72,6 +88,7 @@ export default function App() {
           element={<CampaignManagementPage />}
         />
         {/* 其他活动子页面 */}
+        <Route path="campaigns/content" element={<ContentAssetsPage />} />
         <Route
           path="campaigns/:subId"
           element={<SubPagePlaceholder moduleId="campaigns" />}
@@ -81,6 +98,10 @@ export default function App() {
         <Route
           path="performance"
           element={<ModuleOverviewPage moduleId="performance" />}
+        />
+        <Route
+          path="performance/target-followup"
+          element={<TargetFollowupPage />}
         />
         <Route
           path="performance/:subId"
