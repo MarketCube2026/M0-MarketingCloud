@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "build:github": "tsc -b && vite build --mode github-pages && node scripts/copy-spa-fallback.mjs",
-    "deploy:cloudflare": "npm run build && npx wrangler pages deploy dist --project-name m0-marketingcloud",
+    "deploy:cloudflare": "npm run build && npx wrangler pages deploy dist --project-name m0-marketingcloud --branch main",
     "deploy": "npm run build:github && gh-pages -d dist"
   },
   "dependencies": {
