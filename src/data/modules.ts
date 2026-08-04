@@ -349,7 +349,7 @@ export const modules: ModuleConfig[] = [
       {
         id: "regional",
         title: "区域销售",
-        description: "区域销售业绩热力图",
+        description: "业绩总览、产品分析与团队效能",
         icon: MapPin,
         path: "/channels/regional",
       },

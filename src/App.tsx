@@ -8,6 +8,8 @@ import SalesEnablementPage from "./pages/SalesEnablementPage";
 import CustomerResourcesPage from "./pages/CustomerResourcesPage";
 import ContentAssetsPage from "./pages/ContentAssetsPage";
 import TargetFollowupPage from "./pages/TargetFollowupPage";
+import RegionalSalesPage from "./pages/RegionalSalesPage";
+import ExternalRedirectPage from "./pages/ExternalRedirectPage";
 
 export default function App() {
   return (
@@ -70,6 +72,13 @@ export default function App() {
         <Route
           path="channels"
           element={<ModuleOverviewPage moduleId="channels" />}
+        />
+        <Route path="channels/regional" element={<RegionalSalesPage />} />
+        <Route
+          path="channels/regional/overview"
+          element={
+            <ExternalRedirectPage to="https://m5msd.pages.dev/dashboard.html" />
+          }
         />
         <Route path="channels/enablement" element={<SalesEnablementPage />} />
         <Route
