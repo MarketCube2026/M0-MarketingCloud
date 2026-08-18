@@ -157,7 +157,7 @@ function ProjectManagementTab() {
         title="项目管理"
         className="w-full border-0"
         style={{ minHeight: "720px" }}
-        sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
         loading="lazy"
       />
     </div>
