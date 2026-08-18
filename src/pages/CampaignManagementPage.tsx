@@ -55,6 +55,7 @@ const otherStats: MockStat[] = [
 
 const tabs = [
   { id: "visualization", label: "会议可视化" },
+  { id: "project", label: "项目管理" },
   { id: "score", label: "资源支持评分" },
   { id: "schedule", label: "日程与策划" },
   { id: "budget", label: "预算制作" },
@@ -101,6 +102,7 @@ export default function CampaignManagementPage() {
       {/* Tab 内容 */}
       <div className="animate-fade-up" style={{ animationDelay: "160ms" }}>
         {activeTab === "visualization" && <VisualizationTab />}
+        {activeTab === "project" && <ProjectManagementTab />}
         {activeTab === "score" && <ScoreTab />}
         {activeTab === "schedule" && <ScheduleTab />}
         {activeTab === "budget" && <BudgetTab />}
@@ -116,7 +118,7 @@ function VisualizationTab() {
   return (
     <div className="relative rounded-xl border border-black/[0.06] overflow-hidden">
       <a
-        href="https://m3-mvms.vercel.app/"
+        href="https://m3-mvms.pages.dev"
         target="_blank"
         rel="noopener noreferrer"
         className="absolute top-3 right-3 flex h-7 w-7 items-center justify-center rounded-md bg-white/80 backdrop-blur text-slate-300 transition-colors duration-200 hover:text-emerald-600 hover:bg-white shadow-sm z-10"
@@ -125,11 +127,37 @@ function VisualizationTab() {
         <ExternalLink size={14} strokeWidth={1.5} />
       </a>
       <iframe
-        src="https://m3-mvms.vercel.app/"
+        src="https://m3-mvms.pages.dev"
         title="市场部会议可视化"
         className="w-full border-0"
         style={{ minHeight: "720px" }}
         sandbox="allow-scripts allow-same-origin allow-popups"
+        loading="lazy"
+      />
+    </div>
+  );
+}
+
+// ---------- Tab 2: 项目管理 ----------
+
+function ProjectManagementTab() {
+  return (
+    <div className="relative rounded-xl border border-black/[0.06] overflow-hidden">
+      <a
+        href="https://m6pmpm.pages.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute top-3 right-3 flex h-7 w-7 items-center justify-center rounded-md bg-white/80 backdrop-blur text-slate-300 transition-colors duration-200 hover:text-emerald-600 hover:bg-white shadow-sm z-10"
+        title="在新窗口打开"
+      >
+        <ExternalLink size={14} strokeWidth={1.5} />
+      </a>
+      <iframe
+        src="https://m6pmpm.pages.dev/"
+        title="项目管理"
+        className="w-full border-0"
+        style={{ minHeight: "720px" }}
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
         loading="lazy"
       />
     </div>
@@ -142,7 +170,7 @@ function ScoreTab() {
   return (
     <div className="relative rounded-xl border border-black/[0.06] overflow-hidden">
       <a
-        href="https://m1-mries-mvp.vercel.app/"
+        href="https://meeting-support-scoring.pages.dev/"
         target="_blank"
         rel="noopener noreferrer"
         className="absolute top-3 right-3 flex h-7 w-7 items-center justify-center rounded-md bg-white/80 backdrop-blur text-slate-300 transition-colors duration-200 hover:text-emerald-600 hover:bg-white shadow-sm z-10"
@@ -151,7 +179,7 @@ function ScoreTab() {
         <ExternalLink size={14} strokeWidth={1.5} />
       </a>
       <iframe
-        src="https://m1-mries-mvp.vercel.app/"
+        src="https://meeting-support-scoring.pages.dev/"
         title="资源支持评分"
         className="w-full border-0"
         style={{ minHeight: "720px" }}
